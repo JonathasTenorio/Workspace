@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Fundamentos - align content</title>
+		<style>
+			.container{
+				height: 400px;
+				max-width: 300px;
+				border: 1px solid black;
+				margin: 0 auto;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.item{
+				background-color: orangered;
+				padding: 0 5px;
+				flex: 1;
+				margin: 5px;
+				text-align: center;
+				color: white;
+			}
+
+			.flex-start{
+				align-content: flex-start;
+			}
+
+			.flex-end{
+				align-content: flex-end;
+			}
+
+			.flex-center{
+				justify-content: center;
+			}
+
+			.space-between{
+				align-content: space-between;
+			}
+
+			.space-around{
+				align-content: space-around;
+			}
+
+			.stretch{
+				align-content: stretch;
+			}
+
+			.center{
+				align-content: center;
+			}
+
+		</style>
+
+		<h1>stretch</h1>
+		<section class="container  stretch">
+			<div class="item"> Item 1</div>
+			<div class="item"> Item 2asdasdasdasdasdasdas</div>
+			<div class="item"> Item 3asdasdasdasdasdasd </div>
+			<div class="item"> Item 4asdaaassssssssssssssssssssssasaa </div>
+			<div class="item"> Item 5assdasdasdasdasdddddddddddddddddddddddddddddddddddddasdasds </div>
+		</section>
+
+
+		<h1>center</h1>
+		<section class="container  center">
+			<div class="item"> Item 1</div>
+			<div class="item"> Item 2</div>
+			<div class="item"> Item 3 </div>
+			<div class="item"> Item 4 </div>
+			<div class="item"> Item 5 </div>
+		</section>
+
+
+		<h1>center</h1>
+		<section class="container  center">
+			<div class="item"> Item 1</div>
+			<div class="item"> Item 2</div>
+			<div class="item"> Item 3 </div>
+			<div class="item"> Item 4 </div>
+			<div class="item"> Item 5 </div>
+		</section>
+
+
+		<h1>align space between</h1>
+		<section class="container  space-between">
+			<div class="item"> Item 1</div>
+			<div class="item"> Item 2</div>
+			<div class="item"> Item 3 </div>
+			<div class="item"> Item 4 </div>
+			<div class="item"> Item 5 </div>
+		</section>
+
+
+
+		<h1>align space around</h1>
+		<section class="container  space-around">
+			<div class="item"> Item 1</div>
+			<div class="item"> Item 2</div>
+			<div class="item"> Item 3 </div>
+			<div class="item"> Item 4 </div>
+			<div class="item"> Item 5 </div>
+		</section>
+
+	</body>
+	</html>
