@@ -1,6 +1,0 @@
-package HERANCA;
-    
-class Veiculo{
-
-
-}
