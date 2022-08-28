@@ -1,0 +1,42 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Casting",
+            "request": "launch",
+            "mainClass": "Casting",
+            "projectName": "Variaveis_Tipos_de_dados_e_Operadores_df5ff24c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Operadores_aritmeticos",
+            "request": "launch",
+            "mainClass": "Operadores_aritmeticos",
+            "projectName": "Variaveis_Tipos_de_dados_e_Operadores_df5ff24c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tipos_de_dados",
+            "request": "launch",
+            "mainClass": "Tipos_de_dados",
+            "projectName": "Variaveis_Tipos_de_dados_e_Operadores_df5ff24c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Variaveis_Tipos_de_dados_e_Operadores_df5ff24c"
+        }
+    ]
+}
