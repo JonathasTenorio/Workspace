@@ -1,6 +1,8 @@
+import argparse
 import random
 import string
-import argparse
+import zipfile
+import tarfile
 
 alpha = string.ascii_letters
 num = string.digits
@@ -9,11 +11,19 @@ parser = argparse.ArgumentParser(description="GERADOR DE SENHAS RANDOMICAS!")
 parser.add_argument('-s', '--size', type=int, help='Quantidade de caracteres que tera a senha gerada.', default=8)
 parser.add_argument('-a', '--alpha', help='Utiliza apenas letras para gerar a senha.', default=alpha)
 parser.add_argument('-f', '--file', help='Nome da wordlist. Se nao especificado ira utilizar a wordlist no diretório '
-                                         'atual.', default='a.txt')
+                                         'atual.', default='a.txt.tar')
 args = parser.parse_args()
 
 
 def gerador(chars, size, path):
+    if '.zip' in path:
+        z = zipfile
+        print('Descomprimindo arquivo . . . . .')
+        descompac(path, z)
+    elif '.tar' in path:
+        t = tarfile
+        print('Descomprimindo arquivo . . . . .')
+        descompac(path, t)
     with open(path, "r", encoding="ISO-8859-1") as file:
         print("Gerando a senha . . . .")
         rand = random.SystemRandom()
@@ -27,6 +37,20 @@ def gerador(chars, size, path):
                 gerador(chars=args.alpha, size=args.size, path=args.file)
 
     print("Sucesso! A sua senha não é igual a nenhuma outra neste arquivo.")
+
+
+
+def descompac(file, tipo):
+    try:
+        tipo.open(file, 'r')
+        tipo.extractall()
+        tipo.close()
+        file = file.strip(tipo)
+        print(file)
+        gerador(chars=args.alhpa, size=args.size, path=file)
+    except:
+        print("Error")
+
 
 
 if __name__ == '__main__':
