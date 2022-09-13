@@ -11,10 +11,30 @@ notas = {
         'X': 1/64
         }
 
-composicao = str.upper(input("Insira a composição"))
-print(composicao)
-print(notas)
-n = 0
-for key in notas:
-    print(n)
-    if key in composicao:
+composicao = str.upper(input("Insira a composição\n"))
+print(composicao) #Apagar depois
+composicao = composicao.split('/')
+print(composicao) #Apagar Depois
+
+for element in range(len(composicao)): #Rever posteriormente, provável erro de lógica entre iteração e método.
+    if '' == composicao[element-1]:
+        composicao.remove('')
+print(composicao) # Apagar depois
+somador = 0
+counter = 0
+errors = []
+acertos = 0
+#while counter < len(composicao):
+for element in composicao:
+    if somador < 1:
+        print(f'Estamos no elemento: {element}')
+        for note in element:
+            print(f'Esta é a nota: {note} do elemento {element}')
+            for key in notas:
+                print(f'Esta é a chave: {key}')
+                if note == key:
+                    print('Igual')
+                    somador = somador + notas[key]
+                    break
+                #else:
+print(somador)
